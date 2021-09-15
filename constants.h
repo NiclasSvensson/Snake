@@ -1,8 +1,8 @@
 #ifndef CONSTANTS
 #define CONSTANTS
 
-const int WIDTH = 12;
-const int HEIGHT = 12;
+const int WIDTH = 6;
+const int HEIGHT = 6;
 
 const int MARGIN = 40;
 const int SQUARE_WIDTH = 32;

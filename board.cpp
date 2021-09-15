@@ -20,7 +20,7 @@ Board::Board(){
         list[i].setPosition(MARGIN+x*SQUARE_WIDTH, MARGIN+y*SQUARE_WIDTH);
         ++x;
     }
-    snake = new Snake(2,2,resource);
+    snake = new Snake(int(WIDTH/2-1), int(HEIGHT/2), resource);
 }
 
 bool Board::Draw(sf::RenderWindow &window){

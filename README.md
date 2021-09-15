@@ -21,7 +21,6 @@ make
 ./app
 ```
 
-# Apple sprite
+# Sprites
 
-The apple sprite is created by Kido Tsubomi in Piskel and can be found [here](https://www.piskelapp.com/p/agxzfnBpc2tlbC1hcHByEwsSBlBpc2tlbBiAgICQ8oKrCww/view). All other game art was created by me.
-
+The apple sprite is created by Kido Tsubomi in Piskel and can be found [here](https://www.piskelapp.com/p/agxzfnBpc2tlbC1hcHByEwsSBlBpc2tlbBiAgICQ8oKrCww/view). The gras sprite is created by epic gamer in Piskel and can be found [here](https://www.piskelapp.com/p/agxzfnBpc2tlbC1hcHByEwsSBlBpc2tlbBiAgIDQ5eHJCgw/view). All other game art was created by me.
