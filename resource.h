@@ -6,6 +6,7 @@ private:
     sf::Image snake_image;
     sf::Texture *snake;
     sf::Texture apple;
+    sf::Texture restart;
     sf::Image gras_image;
     sf::Texture *gras;
     sf::Image snake_dead_image;
@@ -13,6 +14,7 @@ private:
 public:
     Resource();
     sf::Texture& Apple();
+    sf::Texture& Restart();
     sf::Texture& Gras(int i);
     sf::Texture& Snake(int i, bool dead);
     ~Resource();

@@ -18,6 +18,9 @@ Resource::Resource(){
     apple = sf::Texture();
     apple.loadFromFile("assets/apple.png");
 
+    restart = sf::Texture();
+    restart.loadFromFile("assets/restart.png");
+
     gras_image = sf::Image();
     gras_image.loadFromFile("assets/gras.png");
     gras = new sf::Texture[4];
@@ -41,6 +44,10 @@ Resource::Resource(){
 
 sf::Texture& Resource::Apple(){
     return apple;
+}
+
+sf::Texture& Resource::Restart(){
+    return restart;
 }
 
 sf::Texture& Resource::Gras(int i){

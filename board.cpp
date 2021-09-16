@@ -21,6 +21,26 @@ Board::Board(){
         ++x;
     }
     snake = new Snake(int(WIDTH/2-1), int(HEIGHT/2), resource);
+
+    restart_sprite = sf::Sprite();
+    restart_sprite.setTexture(resource -> Restart());
+    restart_sprite.setScale(3.0f, 3.0f);
+    restart_sprite.setPosition(MARGIN, MARGIN + HEIGHT*SQUARE_WIDTH + BETWEEN);
+    restart_bound = restart_sprite.getGlobalBounds();
+}
+
+bool Board::Restart(sf::RenderWindow &window, sf::Event &event){
+    sf::Vector2i mouse_position = sf::Mouse::getPosition(window);
+    if (restart_bound.contains(mouse_position.x, mouse_position.y)){
+        if (event.type == sf::Event::MouseButtonReleased && event.mouseButton.button == sf::Mouse::Left){
+            return true;
+        }
+        restart_sprite.setColor(COLOR_FADE);
+    } else {
+        restart_sprite.setColor(COLOR_NO_FADE);
+    }
+    window.draw(restart_sprite);
+    return false;
 }
 
 bool Board::Draw(sf::RenderWindow &window){
@@ -40,6 +60,9 @@ bool Board::Draw(sf::RenderWindow &window){
 
         } else {
             snake -> Move(event);
+        }
+        if (Restart(window, event)){
+            return true;
         }
         snake -> Draw(window);
         window.display();
