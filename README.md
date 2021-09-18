@@ -12,6 +12,9 @@ sudo apt-get install libsfml-dev
 
 git@github.com:NiclasSvensson/Snake.git
 cd Snake
+mkdir build
+cd build
+cmake ..
 make
 ```
 
